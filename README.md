@@ -25,8 +25,13 @@
 - **客户端**  
 APP作为数据展示  
 
-#### 2.2.3 系统详细设计  
-
 ## 三、项目团队组织  
 ### 3.1 组织结构  
+![work1](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/work1.JPG)
 ### 3.2 主要研发人员分工  
+![work2](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/work2.JPG)  
+
+## 四、项目实施计划  
+![work3](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/work3.JPG)  
+
+
