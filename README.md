@@ -38,6 +38,10 @@ APP作为数据展示
 
 ## 五、系统设计  
 ### 5.1 数据库设计  
+![dp1](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/dp1.jpg)  
+![dp2](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/dp2.jpg)  
+![dp3](https://github.com/AlexanderGuan/Andoird-Book-Recommand-spiderbased-on-Douban-Network-Spyder/blob/main/dp3.jpg)  
+
 
 ### 5.2 网络设计  
 将连接APP连接服务器的方法进行封装，使用HttpUrlConnect网络请求，实现前后端数据的传送和接收。控件的生命周期短，所以使用多线程服务模型，用ExecutorService接口管理多线程，每收到一个请求开一个线程去处理，对每个客户都予以快速的响应不阻塞。主线程更新数据，子线程通过handler转接操作主线程ui。调用NetworkInfo方法用于判断当前手机的网络是否可用并且监控网络类型，判断是3G、4G或是wifi。  
@@ -46,7 +50,7 @@ APP作为数据展示
 使用Android Studio软件进行开发，总体框架为四个Fragment布局，分别为'首页'，'消息'，'看看'，'我的'，其中首页包含注册登录界面、欢迎界面、书籍展示界面、内容详情界面、查看词云界面、查看评论界面、用户可以实现注册登录，滑动页面切换书籍、查看图书信息和收藏功能。'消息'界面为和好友聊天，可以发送消息。'看看'界面微展示话题界面，用户可以发起话题讨论，'我的'界面为各种属性设置界面，用户可以自定义设置，查看收藏图书等功能。app开发一共包含四十多个布局文件，六十多个java后端文件，四十余张背景、图标图片
 
 ### 5.4 爬虫设计  
-本项目组的豆瓣爬虫使用了bs4扩展库中的beautifulsoup方法和urllib.request方法。爬虫分为URL管理器、HTML伪装头、HTML解析器和数据存储器4个部分。URL管理器负责统一管理爬取页面的地址，从而减小工作量，并且使代码更加结构化、增强可读性。HTML伪装头负责将爬虫伪装为浏览器访问，其可以将爬虫伪装为来自Gecko或Chrome或Trident的访问，增强爬虫的隐蔽性。HTML解析器负责解析网页，抓取项目所需要的关键字，爬取书籍信息、出版社、价格、评分、图片链接、书本简介、作者简介、评论数、评论内容、标签等信息到本地的缓存中，再由数据存储器同一存储为txt文件。本爬虫通过在阿里云服务器以代理池的方式逃脱反爬虫技术，共爬取了XX本书籍，共XX条信息。
+本项目组的豆瓣爬虫使用了bs4扩展库中的beautifulsoup方法和urllib.request方法。爬虫分为URL管理器、HTML伪装头、HTML解析器和数据存储器4个部分。URL管理器负责统一管理爬取页面的地址，从而减小工作量，并且使代码更加结构化、增强可读性。HTML伪装头负责将爬虫伪装为浏览器访问，其可以将爬虫伪装为来自Gecko或Chrome或Trident的访问，增强爬虫的隐蔽性。HTML解析器负责解析网页，抓取项目所需要的关键字，爬取书籍信息、出版社、价格、评分、图片链接、书本简介、作者简介、评论数、评论内容、标签等信息到本地的缓存中，再由数据存储器同一存储为txt文件。本爬虫通过在阿里云服务器以代理池的方式逃脱反爬虫技术，共爬取了800本书籍，共30000条信息。
 
 
 
