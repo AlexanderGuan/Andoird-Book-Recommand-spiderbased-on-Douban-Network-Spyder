@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="fill_parent" android:layout_height="44dp"
+        android:background="@drawable/titlebar_lightgray_bg" android:orientation="horizontal">
+        <ImageButton android:id="@+id/BtnWrite"
+            android:layout_width="wrap_content" android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true" android:background="@android:color/transparent"
+            android:src="@drawable/write_button">
+        </ImageButton>
+        <TextView android:id="@+id/TextViewUsername"
+            android:layout_width="fill_parent" android:layout_height="fill_parent"
+            android:textColor="@color/black" android:gravity="center" android:textSize="18sp">
+        </TextView>
+        <ImageButton android:id="@+id/BtnRefresh"
+            android:layout_width="wrap_content" android:layout_height="fill_parent"
+            android:layout_alignParentRight="true" android:background="@android:color/transparent"
+            android:src="@drawable/refresh_button">
+        </ImageButton>
+    </RelativeLayout>
+
+    <cn.itcast.douban.BlogListView
+        android:id="@+id/sinaList"
+        android:layout_width="fill_parent"
+        android:layout_height="632dp"
+        android:clickable="true"
+        android:divider="@drawable/divider"
+        android:dividerHeight="1dp"></cn.itcast.douban.BlogListView>
+
+    <!--        导航栏部分-->
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:scaleType="fitXY"
+            android:id="@+id/main_icon"
+            android:layout_width="37dp"
+            android:layout_height="36dp"
+            android:background="@drawable/main_r"
+            android:onClick="OnMyMainClick"
+            />
+        <TextView
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:text="@string/bottom1"
+            android:textColor="@color/red"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:scaleType="fitXY"
+            android:id="@+id/chat_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/chat"
+            android:onClick="OnMyChatClick"
+            />
+        <TextView
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom2"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_look"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/look_icon"
+            android:layout_width="29dp"
+            android:layout_height="37dp"
+            android:background="@drawable/look"
+            android:onClick="OnMyLookClick"
+            android:scaleType="fitXY" />
+        <TextView
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/look_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom3"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_mine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/mine_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/mine"
+            android:onClick="OnMyMineClick"
+            />
+        <TextView
+            android:layout_marginBottom="3dp"
+            android:id="@+id/mine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom4"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

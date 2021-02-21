@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
+    android:background="@mipmap/bg4"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="430dp"
+        android:id="@+id/background_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/background_2"/>
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:id="@+id/iv_slogan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="480dp"
+        android:background="@drawable/below_2"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/re_3"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:id="@+id/btn_wechat"
+                android:textSize="18sp"
+                android:layout_marginTop="650dp"
+                android:layout_toLeftOf="@+id/or"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/check_border"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="微信登录"/>
+
+            <ImageView
+                android:id="@+id/or"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="650dp"
+                android:background="@drawable/or_2"/>
+
+
+            <Button
+                android:id="@+id/btn_phone"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="650dp"
+                android:layout_toRightOf="@+id/or"
+                android:layout_marginRight="25dp"
+              
+                android:background="@drawable/check_border"
+                android:text="手机登录"
+                android:textSize="18sp"
+                android:onClick="Login"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

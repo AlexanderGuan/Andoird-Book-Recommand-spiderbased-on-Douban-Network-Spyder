@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+        <!--        搜索部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/searchLan"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="60dp"
+                    android:drawablePadding="1dp"
+                    android:hint="请输入所需查找的书籍"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textSize="16dp" >
+
+                </EditText>
+
+                <ImageView
+                    android:layout_marginTop="17dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/search_icon">
+
+                </ImageView>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/search_btn_back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="搜索"
+                android:textColor="#333333" />
+        </LinearLayout>
+    </android.widget.Toolbar>
+<androidx.viewpager.widget.ViewPager
+    android:layout_below="@+id/toolbar"
+    android:layout_above="@+id/bottom"
+    android:id="@+id/viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+</androidx.viewpager.widget.ViewPager>
+
+    <!--        照片部分-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book1"/>
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book2"/>
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginTop="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/book3"/>
+    </FrameLayout>
+    <Button
+        android:id="@+id/like_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginBottom="500dp"
+        android:background="@drawable/like" />
+    <Button
+        android:id="@+id/dislike_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="270dp"
+        android:layout_marginBottom="500dp"
+        android:background="@drawable/dislike" />
+
+
+
+
+
+
+
+
+
+    <!--        导航栏部分-->
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_main"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:scaleType="fitXY"
+            android:id="@+id/main_icon"
+            android:layout_width="37dp"
+            android:layout_height="36dp"
+            android:background="@drawable/main_r"
+            android:onClick="OnMyMainClick"
+            />
+        <TextView
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="1dp"
+            android:id="@+id/main_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:text="@string/bottom1"
+            android:textColor="@color/red"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_chat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:scaleType="fitXY"
+            android:id="@+id/chat_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/chat"
+            android:onClick="OnMyChatClick"
+            />
+        <TextView
+            android:layout_marginLeft="1dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/chat_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom2"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_look"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:scaleType="fitXY"
+            android:id="@+id/look_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/look"
+
+            android:focusable="false"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:onClick="OnMyLookClick"
+            />
+        <TextView
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="3dp"
+            android:id="@+id/look_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom3"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:id="@+id/douban_mine"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+        <Button
+            android:id="@+id/mine_icon"
+            android:layout_width="37dp"
+            android:layout_height="37dp"
+            android:background="@drawable/mine"
+            android:onClick="OnMyMineClick"
+            />
+        <TextView
+            android:layout_marginBottom="3dp"
+            android:id="@+id/mine_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bottom4"
+            android:textColor="@color/black"
+            android:textSize="11sp" />
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

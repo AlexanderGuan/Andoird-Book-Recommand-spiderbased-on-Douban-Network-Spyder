@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/f4"
+    tools:context=".FragmentActivity4">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/touxiang"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/login_name"
+                android:layout_marginLeft="20dp"
+                android:textSize="23sp"
+                android:text="@string/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/male"
+            android:layout_width="13dp"
+            android:layout_height="13dp" />
+        <TextView
+            android:textColor="@color/gray"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="-90dp"
+            android:textSize="14sp"
+            android:text="个性签名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="481dp"
+        android:layout_marginTop="250dp" >
+    </RelativeLayout>
+    <com.example.testact.ItemView
+        android:id="@+id/sixin"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/sixin"
+        app:left_text="我的私信"
+        app:right_text=""/>
+
+    <com.example.testact.ItemView
+        android:id="@+id/xunzhang"
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/xunzhang"
+        app:left_text="我的勋章"
+        app:right_text=""/>
+
+    <com.example.testact.ItemView
+        android:id="@+id/shoucang"
+        android:layout_marginTop="250dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/shoucang"
+        app:left_text="我的收藏"
+        app:right_text=""/>
+
+    <com.example.testact.ItemView
+        android:id="@+id/xiazai"
+        android:layout_marginTop="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/xiazai"
+        app:left_text="我的下载"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/huiyuan"
+        android:layout_marginTop="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/huiyuan"
+        app:left_text="我的会员"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/saosao"
+        android:layout_marginTop="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/saosao"
+        app:left_text="扫一扫"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/yijian"
+        android:layout_marginTop="450dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/yijian"
+        app:left_text="我的意见"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/banben"
+        android:layout_marginTop="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/banben"
+        app:left_text="版本更新"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/huancun"
+        android:layout_marginTop="550dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/huancun"
+        app:left_text="清除缓存"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/bangzhu"
+        android:layout_marginTop="600dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/bangzhu"
+        app:left_text="帮助"
+        app:right_text="" />
+    <com.example.testact.ItemView
+        android:id="@+id/guanyu"
+        android:layout_marginTop="600dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_icon="@drawable/guanyu"
+        app:left_text="关于我们"
+        app:right_text="" />
+
+</FrameLayout>

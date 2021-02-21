@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentActivity1">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@mipmap/bg2_1"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--        搜索部分-->
+    <LinearLayout
+        android:id="@+id/lin_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/searchLan"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="49dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:paddingLeft="60dp"
+                android:drawablePadding="1dp"
+                android:hint="请输入所需查找的书籍"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:textSize="16dp" >
+
+            </EditText>
+
+            <ImageView
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/search_icon_2">
+
+            </ImageView>
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/search_btn_back"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="搜索"
+            android:textColor="#333333" />
+    </LinearLayout>
+        <!--        滑动页面容器部分（从搜索栏以下)-->
+        <androidx.viewpager.widget.ViewPager
+            android:layout_below="@+id/lin_search"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
+
+
+    <!--        照片展示部分-->
+    <FrameLayout
+        android:id="@+id/fra_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center">
+
+        <com.loopj.android.image.SmartImageView
+            android:id="@+id/photo_show"
+            android:layout_width="345dp"
+            android:layout_height="405dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="58dp"
+            android:background="@mipmap/bg9"
+            android:scaleType='fitXY' />
+    </FrameLayout>
+
+    <!--        书籍信息展示部分-->
+    <TextView
+        android:id="@+id/book_info_name"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="233dp"
+        android:layout_marginLeft="60dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxLength="8"
+        android:textSize="23sp"/>
+    <TextView
+        android:id="@+id/book_info_author"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="233dp"
+        android:layout_marginLeft="243dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxLength="8"
+        android:textSize="23sp"/>
+
+
+    <!--        喜欢或不喜欢的按钮部分-->
+    <Button
+        android:id="@+id/dislike_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/lin_search"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="70dp"
+        android:background="@drawable/dislike_2" />
+    <Button
+        android:id="@+id/like_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/lin_search"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="270dp"
+        android:background="@drawable/like_2" />
+
+    <!--        进入书籍详情的按钮部分-->
+    <Button
+        android:id="@+id/btn_inter_book"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/check_border3"
+        android:gravity="center"
+        android:layout_below="@+id/fra_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:onClick="On_Book_Detail"/>
+    </RelativeLayout>
+
+
+</FrameLayout>

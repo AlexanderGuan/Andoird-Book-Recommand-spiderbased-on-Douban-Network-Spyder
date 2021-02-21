@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">看看</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="spn_prompt_category">类别</string>
+    <string name="spn_prompt_subcategory">子类别</string>
+    <string name="spn_prompt_account">账户</string>
+    <string name="spn_prompt_corporation">商家</string>
+    <string name="spn_prompt_project">项目</string>
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+
+    <string name="aboutUs">关于我们</string>
+    <string name="jianjie">我们团队立志要开发一款简单的、好用的、人性化 的个人钱包管理APP软件；
+	            此软件能带您轻松管理自己的收入和花销，还有统计和警告功能，再也不用担心钱花超了。</string>
+
+    <string name="login">登录</string>
+    <string name="forgetPwd">忘记密码</string>
+    <string name="startRegist">开始注册</string>
+    <string name="regist">注册</string>
+    <string name="resPwd">重置密码</string>
+    <string name="confirm">确认</string>
+
+    <string name="detail_tab">明细</string>
+    <string name="category_report_tab">类别报表</string>
+
+    <string name="setting">特色设置</string>
+    <string name="setting_des">该功能正在开发中，敬请期待！</string>
+
+    <string name="wish">心愿墙</string>
+    <string name="wish_des">该功能正在开发中，敬请期待！</string>
+
+    <string name="count">统计</string>
+    <string name="count_des">该功能正在开发中，敬请期待！</string>
+
+    <!-- memo——MyDialog -->
+    <string name="dialog_memo_title">备注</string>
+    <string name="dialog_memo_ok">保存</string>
+    <string name="dialog_memo_cancle">取消</string>
+
+
+    <string name="bottom1">主页</string>
+    <string name="bottom2">聊天</string>
+    <string name="bottom3">看看</string>
+    <string name="bottom4">我的</string>
+
+    <string name="login_name">书荐兄</string>
+
+    <!-- TransactionTabActivity -->
+    <string name="input_message">请填写金额</string>
+    <string name="edit_message">编辑成功</string>
+    <string name="save_message">保存成功</string>
+    <string name="edit_in">编辑收入</string>
+    <string name="edit_out">编辑支出</string>
+
+
+    <string name="refresh">刷新</string>
+    <string name="unAuthUser">未授权用户</string>
+    <string name="more">更多</string>
+
+
+    <string name="text1">&#160;&#160;&#160;&#160;&#160;这是我们第一次进行APP开发，在四个月的时间里，历经艰辛，碰到无数的困难，改过无数个BUG，开了无数场技术会，
+    终于，在六月收获的季节，完成了此款APP的开发。</string>
+    <string name="text2">&#160;&#160;&#160;&#160;&#160;在此，由衷的感谢黄秋颖老师在《软件工程》课程和此次APP开发过程中的谆谆教导，在此期间，我们学习到很多专业知识，
+    积累了很多APP开发的珍贵经验，在此对老师表示感谢。</string>
+    <string name="text3">&#160;&#160;&#160;&#160;&#160;其次，感谢项目经理王震尧同学和技术经理赵世文同学，在此期间，他们不辞辛苦，在遇到团队沟通等问题时，
+    项目经理及时主持组会，让我们进行充分的沟通；在遇到技术难题时，技术经理和我们深入交流，探讨专业问题，推进项目进展；同时，
+感谢优秀的队员——吴乔杰、丁鑫、许柏涛、汪严逸、关力铭，正是由于队员之间的默契配合，才使得此次APP开发的成功实现。</string>
+    <string name="text4">&#160;&#160;&#160;&#160;&#160;此次项目中，我们还有很多不足，希望在今后的学习中，能够将此款APP进行完善优化，使它成为更优质、更受用户喜爱的一款APP。</string>
+    <string name="text5">项目团队全体成员：王震尧、赵世文、吴乔杰、丁鑫、许柏涛、汪严逸、关力铭</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

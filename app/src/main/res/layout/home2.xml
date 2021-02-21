@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@mipmap/bg2_1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <!--        搜索部分-->
+        <LinearLayout
+            android:id="@+id/lin_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/searchLan"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="60dp"
+                    android:drawablePadding="1dp"
+                    android:hint="请输入所需查找的书籍"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textSize="16dp" >
+
+                </EditText>
+
+                <ImageView
+                    android:layout_marginTop="17dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/search_icon_2">
+
+                </ImageView>
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/search_btn_back"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="搜索"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+
+
+    <!--        照片展示部分-->
+    <FrameLayout
+        android:id="@+id/fra_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center">
+
+        <com.loopj.android.image.SmartImageView
+            android:id="@+id/photo_show"
+            android:layout_width="345dp"
+            android:layout_height="405dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="58dp"
+            android:scaleType='fitXY' />
+    </FrameLayout>
+
+    <!--        书籍信息展示部分-->
+    <TextView
+        android:id="@+id/book_info_name"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxLength="10"
+        android:textSize="20sp"
+        android:text="书籍名字测试"/>
+    <TextView
+        android:id="@+id/book_info_author"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="215dp"
+        android:layout_marginLeft="230dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:maxLength="8"
+        android:textSize="20sp"
+        android:text="书籍作者测试"/>
+
+
+    <!--        喜欢或不喜欢的按钮部分-->
+    <Button
+        android:id="@+id/dislike_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/lin_search"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="70dp"
+        android:background="@drawable/dislike_2" />
+    <Button
+        android:id="@+id/like_btn"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/lin_search"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="270dp"
+        android:background="@drawable/like_2" />
+
+    <!--        进入书籍详情的按钮部分-->
+    <Button
+        android:id="@+id/btn_inter_book"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/check_border3"
+        android:gravity="center"
+        android:layout_below="@+id/fra_photo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:onClick="On_Book_Detail"/>
+
+
+
+
+
+
+
+
+
+    <!--        导航栏部分-->
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/douban_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <Button
+                android:scaleType="fitXY"
+                android:id="@+id/main_icon"
+                android:layout_width="37dp"
+                android:layout_height="36dp"
+                android:background="@drawable/main_r"
+                android:onClick="OnMyMainClick"
+                />
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/main_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:text="@string/bottom1"
+                android:textColor="@color/red"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/douban_chat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <Button
+                android:scaleType="fitXY"
+                android:id="@+id/chat_icon"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/chat"
+                android:onClick="OnMyChatClick"
+                />
+            <TextView
+                android:layout_marginLeft="1dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/chat_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottom2"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/douban_look"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <Button
+                android:scaleType="fitXY"
+                android:id="@+id/look_icon"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/look"
+
+                android:focusable="false"
+                android:clickable="false"
+                android:focusableInTouchMode="false"
+                android:onClick="OnMyLookClick"
+                />
+            <TextView
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/look_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottom3"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/douban_mine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+            <Button
+                android:id="@+id/mine_icon"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:background="@drawable/mine"
+                android:onClick="OnMyMineClick"
+                />
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:id="@+id/mine_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bottom4"
+                android:textColor="@color/black"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

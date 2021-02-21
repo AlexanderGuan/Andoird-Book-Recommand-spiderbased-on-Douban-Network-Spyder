@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="35dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingBottom="30dp"
+    android:background="@mipmap/bg_2">
+    <LinearLayout
+        android:id="@+id/photo_and_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.loopj.android.image.SmartImageView
+            android:id="@+id/photo_show_detail"
+            android:layout_width="185dp"
+            android:layout_height="265dp"
+            android:scaleType='fitXY'>
+
+        </com.loopj.android.image.SmartImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/book_info_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="书名："/>
+            <TextView
+                android:id="@+id/book_info_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="作者："/>
+            <TextView
+                android:id="@+id/book_info_publisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="出版商："/>
+            <TextView
+                android:id="@+id/book_info_pubDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="出版日期："/>
+            <TextView
+                android:id="@+id/book_info_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="价格："/>
+            <TextView
+                android:id="@+id/book_info_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/textstyle"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:text="评分："/>
+            <Button
+                android:id="@+id/collect"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:onClick="CollectClick_cm"
+                android:background="@drawable/collect"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_two_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/photo_and_info"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_introduce_bookinfo"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dip"
+
+            android:background="@drawable/check_border"
+            android:gravity="center"
+            android:textColor="@color/yellow"
+            android:textStyle="bold"
+            android:text="评论"/>
+        <Button
+            android:id="@+id/btn_comment_wordcloud"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_margin="5dip"
+            android:background="@drawable/check_border"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="click_inter_wordcloud"
+            android:text="词云"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_comment"
+        style="@style/textstyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lin_two_button"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:scrollbars="vertical"
+        android:maxLines="13"
+        android:text=""/>
+
+
+</RelativeLayout>

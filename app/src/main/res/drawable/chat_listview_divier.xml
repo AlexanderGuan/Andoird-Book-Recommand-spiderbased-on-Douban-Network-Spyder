@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+         android:left="75dp">     <!--设置边距-->
+        <shape android:shape="rectangle" >  <!--设置形状-->
+            <solid android:color="@color/white" />
+        </shape>
+    </item>
+</layer-list>

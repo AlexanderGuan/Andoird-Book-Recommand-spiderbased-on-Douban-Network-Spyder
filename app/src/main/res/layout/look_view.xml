@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="vertical"
+  android:padding="10dp" android:descendantFocusability="blocksDescendants"
+  android:background="@color/white">
+  <RelativeLayout android:layout_width="fill_parent" 
+  	android:layout_height="fill_parent" >
+ 	<cn.itcast.douban.PictureWebView android:id="@+id/profileImage"
+ 		android:layout_width="48dp"
+ 		android:layout_height="48dp"
+ 		android:scrollbars="none"
+ 		android:layout_alignParentLeft="true"
+ 		android:background="@drawable/portrait">
+ 	</cn.itcast.douban.PictureWebView>
+ 	<ImageView android:id="@+id/vImage"
+ 		android:layout_width="wrap_content"
+ 		android:layout_height="wrap_content"
+ 		android:layout_alignRight="@+id/profileImage"
+ 		android:layout_alignBottom="@+id/profileImage"
+ 		android:src="@drawable/v">
+ 	</ImageView>
+ 	<RelativeLayout android:layout_alignParentRight="true"
+ 		android:layout_toRightOf="@+id/profileImage"
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="fill_parent"
+ 		android:layout_marginLeft="10dp">
+ 		<TextView android:id="@+id/userName" android:layout_height="wrap_content" android:layout_alignParentTop="true"
+ 			android:textColor="@color/red"
+ 			android:textSize="15sp"
+ 			android:paddingBottom="5dp" android:layout_width="fill_parent">
+ 		</TextView>
+  		<cn.itcast.douban.BlogTextView android:id="@+id/blogText" android:layout_height="wrap_content"
+ 			android:layout_below="@+id/userName"
+ 			android:textColor="@color/black"
+ 			android:textSize="15sp" android:layout_width="wrap_content">
+ 		</cn.itcast.douban.BlogTextView>
+ 		<cn.itcast.douban.PictureWebView android:id="@+id/smallImage"
+	 		android:layout_width="10dp"
+	 		android:layout_height="10dp"
+	 		android:scrollbars="none"
+	 		android:layout_below="@+id/blogText"
+	 		android:background="@drawable/image">
+	 	</cn.itcast.douban.PictureWebView>
+		<RelativeLayout android:layout_width="fill_parent" 
+ 			android:layout_height="wrap_content"
+ 			android:layout_below="@+id/smallImage"
+ 			android:background="@drawable/popup"
+ 			android:paddingTop="10dp"
+ 			android:paddingBottom="5dp"
+ 			android:paddingLeft="5dp"
+ 			android:paddingRight="5dp"
+ 			android:id="@+id/reBlog">
+	 		<cn.itcast.douban.BlogTextView android:id="@+id/reBlogText" android:layout_width="fill_parent"
+	 			android:layout_height="wrap_content"
+
+	 			android:textColor="@color/black"
+	 			android:textSize="15sp">
+	 		</cn.itcast.douban.BlogTextView>
+	 		<cn.itcast.douban.PictureWebView android:id="@+id/reImage"
+		 		android:layout_width="10dp"
+		 		android:layout_height="10dp"
+		 		android:scrollbars="none"
+		 		android:layout_below="@+id/reBlogText"
+		 		android:background="@drawable/image">
+		 	</cn.itcast.douban.PictureWebView>
+ 		</RelativeLayout>	
+ 		<TextView android:id="@+id/sourceText" android:layout_width="fill_parent"
+ 			android:layout_height="wrap_content" 
+ 			android:layout_alignLeft="@+id/userName"
+ 			android:layout_below="@+id/reBlog"
+ 			android:textColor="@color/blue"
+ 			android:textSize="10sp"
+ 			android:paddingBottom="5dp">
+ 		</TextView>	
+ 	</RelativeLayout>
+  </RelativeLayout>
+</LinearLayout>

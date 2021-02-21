@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="25dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/login_name"
+                android:layout_marginLeft="20dp"
+                android:textSize="23sp"
+                android:text="昵称"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/red"
+                    android:textSize="14sp"
+                    android:text="性别"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="10dp"
+
+                    android:layout_width="13dp"
+                    android:layout_height="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:layout_marginTop="35dp"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="3dp" />
+    <ListView
+        android:background="@color/white"
+        android:dividerHeight="0.5dp"
+
+        android:id="@+id/my_listview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <ImageView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <ListView
+        android:background="@color/white"
+        android:dividerHeight="0.5dp"
+
+        android:id="@+id/my_listview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <ImageView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <ListView
+        android:background="@color/white"
+        android:dividerHeight="0.5dp"
+
+        android:id="@+id/my_listview3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    <ImageView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
